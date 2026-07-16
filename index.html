@@ -13,7 +13,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f9f9f9;
+      background: #ffffff;
       min-height: 100vh;
       padding: 40px 60px;
     }
@@ -25,23 +25,23 @@
     }
 
     .logo {
-      font-size: 25px;
+      font-size: 1.5rem; /* was 2.5rem, -40% */
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.2px; /* slightly reduced */
       color: #000;
       text-transform: uppercase;
     }
 
     .btn {
       background: #000;
-      color: #f9f9f9;
+      color: #fff;
       border: none;
-      padding: 18px 40px;
+      padding: 11px 24px; /* was 18px 40px, -40% */
       border-radius: 50px;
-      font-size: 10px;
+      font-size: 0.6rem; /* was 1rem, -40% */
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.6px;
       cursor: pointer;
       transition: transform 0.2s ease;
     }
@@ -50,17 +50,16 @@
       transform: scale(1.05);
     }
 
-    /* Mobile responsive */
     @media (max-width: 768px) {
       body {
         padding: 30px 20px;
       }
       .logo {
-        font-size: 1.8rem;
+        font-size: 1.08rem;
       }
       .btn {
-        padding: 14px 28px;
-        font-size: 0.9rem;
+        padding: 8px 17px;
+        font-size: 0.54rem;
       }
     }
   </style>
@@ -71,4 +70,3 @@
     <button class="btn">GET IN TOUCH</button>
   </header>
 </body>
-</html>
