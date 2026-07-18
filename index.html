@@ -57,8 +57,11 @@
       width: 1.1em;
       height: 1.1em;
       flex-shrink: 0;
-      fill: currentColor;
-      transform: translateY(1px);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
     .btn:active, .btn:focus {
       background: #000;
@@ -79,10 +82,6 @@
         letter-spacing: 0.685083px;
         gap: 8px;
       }
-      .btn svg {
-        width: 1.1em;
-        height: 1.1em;
-      }
     }
   </style>
 </head>
@@ -91,7 +90,8 @@
     <a href="https://linksco.co.za" class="logo">LINKSCO</a>
     <a href="mailto:info@linksco.co.za" class="btn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="m22 6-10 7L2 6"/>
       </svg>
       INFO@LINKSCO.CO.ZA
     </a>
