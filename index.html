@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ff">
+  <meta name="theme-color" content="#f2f2f2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     }
     body {
       font-family: "Ramabhadra", sans-serif;
-      background: #fff;
+      background: #f2f2f2;
       min-height: 100vh;
       padding: 30px 60px;
     }
@@ -28,22 +28,22 @@
     .logo {
       font-size: 1.543275rem;
       font-weight: 400;
-      color: #000;
+      color: #333;
       text-transform: uppercase;
       text-decoration: none;
       display: inline-block;
       line-height: 1.1;
     }
     .logo:visited, .logo:active, .logo:focus {
-      color: #000;
+      color: #333;
       outline: none;
     }
     .btn {
-      background: #fff;
-      color: #000;
-      border: 1px solid #000;
-      padding: 11.26480142px 26.84564409px;
-      border-radius: 50px;
+      background: #f2f2f2;
+      color: #444;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 16px;
       font-size: 0.79954324222rem;
       text-transform: uppercase;
       letter-spacing: 0.685083px;
@@ -52,6 +52,10 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      box-shadow: 
+        8px 8px 16px #d9d9d9,
+        -8px -8px 16px #ffffff;
+      transition: all 0.2s ease;
     }
     .btn svg {
       width: 1.1em;
@@ -63,10 +67,17 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
-    .btn:active, .btn:focus {
-      background: #fff;
-      color: #000;
-      transform: none;
+    .btn:hover {
+      box-shadow: 
+        4px 4px 8px #d9d9d9,
+        -4px -4px 8px #ffffff;
+    }
+    .btn:active {
+      box-shadow: 
+        inset 4px 4px 8px #d9d9d9,
+        inset -4px -4px 8px #ffffff;
+    }
+    .btn:focus {
       outline: none;
     }
     @media (max-width: 768px) {
@@ -77,10 +88,11 @@
         font-size: 1.1145875rem;
       }
       .btn {
-        padding: 8.34339342px 18.08142009px;
+        padding: 10px 22px;
         font-size: 0.69293626416rem;
         letter-spacing: 0.685083px;
         gap: 8px;
+        border-radius: 14px;
       }
     }
   </style>
