@@ -45,11 +45,19 @@
       padding: 11.26480142px 26.84564409px;
       border-radius: 50px;
       font-size: 0.79954324222rem;
-      text-transform: uppercase;
-      letter-spacing: 0.685083px;
+      text-transform: none;
+      letter-spacing: 0;
       cursor: pointer;
       text-decoration: none;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn svg {
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      fill: currentColor;
     }
     .btn:active, .btn:focus {
       background: #000;
@@ -67,8 +75,7 @@
       .btn {
         padding: 8.34339342px 18.08142009px;
         font-size: 0.69293626416rem;
-        letter-spacing: 0.685083px;
-        border-radius: 50px;
+        gap: 6px;
       }
     }
   </style>
@@ -76,7 +83,12 @@
 <body>
   <header>
     <a href="https://linksco.co.za" class="logo">LINKSCO</a>
-    <a href="mailto:info@linksco.co.za" class="btn">GET IN TOUCH</a>
+    <a href="mailto:info@linksco.co.za" class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
+      </svg>
+      info@linksco.co.za
+    </a>
   </header>
 </body>
 </html>
