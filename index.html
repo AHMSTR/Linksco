@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f2f2f2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
   <title>Linksco</title>
   <style>
     * {
@@ -15,7 +15,7 @@
       box-sizing: border-box;
     }
     body {
-      font-family: "Atkinson Hyperlegible", sans-serif;
+      font-family: "Ramabhadra", sans-serif;
       background: #f2f2f2;
       min-height: 100vh;
       padding: 30px 60px;
@@ -34,38 +34,24 @@
       display: inline-block;
       line-height: 1.1;
     }
-    .logo:visited, .logo:active, .logo:focus {
-      color: #333;
-      outline: none;
-    }
     .btn {
       background: #f2f2f2;
       color: #444;
       border: none;
       padding: 14px 32px;
-      border-radius: 16px;
+      border-radius: 50px;
       font-size: 0.79954324222rem;
-      text-transform: uppercase;
+      text-transform: uppercase; /* keeps it uppercase */
       letter-spacing: 0.685083px;
       cursor: pointer;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
       box-shadow: 
         8px 8px 16px #d9d9d9,
         -8px -8px 16px #ffffff;
       transition: all 0.2s ease;
-    }
-    .btn svg {
-      width: 1.1em;
-      height: 1.1em;
-      flex-shrink: 0;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
     }
     .btn:hover {
       box-shadow: 
@@ -76,9 +62,6 @@
       box-shadow: 
         inset 4px 4px 8px #d9d9d9,
         inset -4px -4px 8px #ffffff;
-    }
-    .btn:focus {
-      outline: none;
     }
     @media (max-width: 768px) {
       body {
@@ -91,8 +74,7 @@
         padding: 10px 22px;
         font-size: 0.69293626416rem;
         letter-spacing: 0.685083px;
-        gap: 8px;
-        border-radius: 14px;
+        border-radius: 50px;
       }
     }
   </style>
@@ -101,11 +83,7 @@
   <header>
     <a href="https://linksco.co.za" class="logo">LINKSCO</a>
     <a href="mailto:info@linksco.co.za" class="btn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="2" y="4" width="20" height="16" rx="2"/>
-        <path d="m22 6-10 7L2 6"/>
-      </svg>
-      INFO@LINKSCO.CO.ZA
+      Get in touch
     </a>
   </header>
 </body>
