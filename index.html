@@ -86,17 +86,5 @@
       Get in touch
     </a>
   </header>
-
-  <script>
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const href = this.href;
-        setTimeout(() => {
-          window.location.href = href;
-        }, 2000);
-      });
-    });
-  </script>
 </body>
 </html>
