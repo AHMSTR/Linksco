@@ -40,43 +40,43 @@
     }
     .image-container img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 29.4px; filter: grayscale(0%); pointer-events: none; user-select: none; -webkit-user-drag: none; opacity: 0.75; }
 
-    /* Contact Form - MATCH HEADER SIZE */
-    .contact-section { max-width: 700px; margin: 78.4px auto 0 auto; text-align: center; }
-    .contact-section h2 { font-size: 1.4rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 15.68px; color: #333; } /* scaled down */
-    .contact-section p { font-size: 0.85rem; font-weight: 400; margin-bottom: 29.4px; opacity: 0.8; } /* scaled down */
+    /* Contact Form - MID SIZE */
+    .contact-section { max-width: 650px; margin: 78.4px auto 0 auto; text-align: center; } /* slightly narrower */
+    .contact-section h2 { font-size: 1.5rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 17px; color: #333; }
+    .contact-section p { font-size: 0.88rem; font-weight: 400; margin-bottom: 32px; opacity: 0.8; }
     
-    .contact-form { display: flex; flex-direction: column; gap: 13.9944px; text-align: left; }
+    .contact-form { display: flex; flex-direction: column; gap: 15.5px; text-align: left; }
 
-    /* INPUTS MATCH HEADER BUTTON */
+    /* SMALLER INPUTS - between header and old size */
     .contact-form input, 
     .contact-form textarea {
-      padding: 13.9944px 23.52px; /* same vertical as header btn */
-      border-radius: 25.8px;
+      padding: 12.5px 20px; /* was 13.99px 23.52px */
+      border-radius: 23px; /* was 25.8px */
       border: none;
       background: #f2f2f2;
       font-family: "Atkinson Hyperlegible", sans-serif;
       font-weight: 400;
-      font-size: 0.90500299686rem; /* same as header btn */
+      font-size: 0.87rem; /* was 0.905rem */
       color: #444;
-      letter-spacing: 0.4px;
-      box-shadow: inset 5.17px 5.17px 10.34px #d9d9d9, inset -5.17px -5.17px 10.34px #ffffff;
+      letter-spacing: 0.45px;
+      box-shadow: inset 4.5px 4.5px 9px #d9d9d9, inset -4.5px -4.5px 9px #ffffff;
       outline: none;
       transition: all 0.2s ease;
     }
     .contact-form input:focus, 
     .contact-form textarea:focus {
-      box-shadow: inset 3.45px 3.45px 6.89px #d9d9d9, inset -3.45px -3.45px 6.89px #ffffff;
+      box-shadow: inset 3px 3px 6px #d9d9d9, inset -3px -3px 6px #ffffff;
     }
-    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form textarea { min-height: 115px; resize: vertical; }
 
-    /* BUTTON MATCH HEADER BUTTON */
+    /* SMALLER BUTTON - still full width CTA */
     .contact-form .btn {
       width: 100%;
-      margin-top: 13.9944px;
-      padding: 13.9944px 0; /* same as header */
-      font-size: 0.90500299686rem; /* same as header */
-      border-radius: 25.8px;
-      letter-spacing: 0.67138134px; /* same as header */
+      margin-top: 15.5px;
+      padding: 12.5px 0; /* was 13.99px */
+      font-size: 0.87rem; /* was 0.905rem */
+      border-radius: 23px;
+      letter-spacing: 1.1px; /* tighter than before */
       text-align: center;
     }
 
@@ -90,10 +90,10 @@
       .logo { font-size: 1.114141665rem; }
       .btn { padding: 9.996px 21.9912px; font-size: 0.78401115738rem; letter-spacing: 0.67138134px; border-radius: 49px; }
       .image-container { margin-top: 39.2px; padding: 14px; border-radius: 39.2px; }
-      .contact-section { margin-top: 58.8px; }
-      .contact-section h2 { font-size: 1.2rem; }
+      .contact-section { margin-top: 58.8px; max-width: 100%; }
+      .contact-section h2 { font-size: 1.3rem; }
       
-      /* prevent iOS zoom - must be 16px */
+      /* prevent iOS zoom */
       .contact-form input,
       .contact-form textarea,
       .contact-form .btn {
@@ -101,10 +101,12 @@
       }
       .contact-form input,
       .contact-form textarea {
-        padding: 14px 21px;
+        padding: 13px 18px;
+        border-radius: 23px;
       }
       .contact-form .btn {
-        padding: 14px 0;
+        padding: 13px 0;
+        border-radius: 23px;
       }
     }
   </style>
