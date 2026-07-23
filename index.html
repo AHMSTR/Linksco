@@ -40,24 +40,25 @@
     }
     .image-container img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 29.4px; filter: grayscale(0%); pointer-events: none; user-select: none; -webkit-user-drag: none; opacity: 0.75; }
 
-    /* Contact Form */
+    /* Contact Form - MATCH HEADER SIZE */
     .contact-section { max-width: 700px; margin: 78.4px auto 0 auto; text-align: center; }
-    .contact-section h2 { font-size: 1.8rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 19.6px; color: #333; }
-    .contact-section p { font-size: 0.95rem; font-weight: 400; margin-bottom: 39.2px; opacity: 0.8; }
+    .contact-section h2 { font-size: 1.4rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 15.68px; color: #333; } /* scaled down */
+    .contact-section p { font-size: 0.85rem; font-weight: 400; margin-bottom: 29.4px; opacity: 0.8; } /* scaled down */
     
-    .contact-form { display: flex; flex-direction: column; gap: 17.15px; text-align: left; }
+    .contact-form { display: flex; flex-direction: column; gap: 13.9944px; text-align: left; }
 
-    /* SMALLER INPUTS */
+    /* INPUTS MATCH HEADER BUTTON */
     .contact-form input, 
     .contact-form textarea {
-      padding: 13.78px 20.68px;
+      padding: 13.9944px 23.52px; /* same vertical as header btn */
       border-radius: 25.8px;
       border: none;
       background: #f2f2f2;
       font-family: "Atkinson Hyperlegible", sans-serif;
       font-weight: 400;
-      font-size: 0.84rem;
+      font-size: 0.90500299686rem; /* same as header btn */
       color: #444;
+      letter-spacing: 0.4px;
       box-shadow: inset 5.17px 5.17px 10.34px #d9d9d9, inset -5.17px -5.17px 10.34px #ffffff;
       outline: none;
       transition: all 0.2s ease;
@@ -66,16 +67,16 @@
     .contact-form textarea:focus {
       box-shadow: inset 3.45px 3.45px 6.89px #d9d9d9, inset -3.45px -3.45px 6.89px #ffffff;
     }
-    .contact-form textarea { min-height: 137.9px; resize: vertical; }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
 
-    /* REDUCED BUTTON TO MATCH */
+    /* BUTTON MATCH HEADER BUTTON */
     .contact-form .btn {
       width: 100%;
-      margin-top: 20.7px; /* reduced from 23.52px */
-      padding: 15.72px 0; /* reduced from 17.864px */
-      font-size: 0.92rem; /* reduced from 1.045rem */
+      margin-top: 13.9944px;
+      padding: 13.9944px 0; /* same as header */
+      font-size: 0.90500299686rem; /* same as header */
       border-radius: 25.8px;
-      letter-spacing: 1.6px; /* slightly tighter */
+      letter-spacing: 0.67138134px; /* same as header */
       text-align: center;
     }
 
@@ -90,8 +91,7 @@
       .btn { padding: 9.996px 21.9912px; font-size: 0.78401115738rem; letter-spacing: 0.67138134px; border-radius: 49px; }
       .image-container { margin-top: 39.2px; padding: 14px; border-radius: 39.2px; }
       .contact-section { margin-top: 58.8px; }
-      .contact-section h2 { font-size: 1.4rem; }
-      footer { margin-top: 58.8px; padding: 19.6px 0; }
+      .contact-section h2 { font-size: 1.2rem; }
       
       /* prevent iOS zoom - must be 16px */
       .contact-form input,
@@ -102,11 +102,9 @@
       .contact-form input,
       .contact-form textarea {
         padding: 14px 21px;
-        border-radius: 25.8px;
       }
       .contact-form .btn {
-        padding: 15.2px 0; /* scaled for mobile */
-        border-radius: 25.8px;
+        padding: 14px 0;
       }
     }
   </style>
