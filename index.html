@@ -49,10 +49,10 @@
     
     .contact-form { display: flex; flex-direction: column; gap: 13.9944px; text-align: left; }
 
-    /* INPUTS = HEADER BUTTON RADIUS */
+    /* INPUTS = HEADER BUTTON SIZE */
     .contact-form input {
       padding: 13.9944px 31.9872px;
-      border-radius: 49px; /* pill to match header */
+      border-radius: 49px;
       border: none;
       background: #f2f2f2;
       font-family: "Atkinson Hyperlegible", sans-serif;
@@ -67,10 +67,10 @@
     }
     .contact-form input:focus { box-shadow: inset 3.92px 3.92px 7.84px #d9d9d9, inset -3.92px -3.92px 7.84px #ffffff; }
 
-    /* TEXTAREA = SOFTER RADIUS */
+    /* TEXTAREA */
     .contact-form textarea {
       padding: 13.9944px 31.9872px;
-      border-radius: 25.8px; /* softer for multi-line */
+      border-radius: 25.8px;
       border: none;
       background: #f2f2f2;
       font-family: "Atkinson Hyperlegible", sans-serif;
@@ -87,17 +87,17 @@
     }
     .contact-form textarea:focus { box-shadow: inset 3.92px 3.92px 7.84px #d9d9d9, inset -3.92px -3.92px 7.84px #ffffff; }
 
-    /* BUTTON = HEADER BUTTON */
+    /* SMALLER BUTTON - 90% OF HEADER */
     .contact-form .btn {
       width: auto;
       align-self: center;
       margin-top: 13.9944px;
-      padding: 13.9944px 31.9872px;
-      font-size: 0.90500299686rem;
-      border-radius: 49px; /* pill to match header */
-      letter-spacing: 0.67138134px;
+      padding: 12.595px 28.7885px; /* -10% */
+      font-size: 0.8145rem; /* -10% */
+      border-radius: 44px; /* -10% */
+      letter-spacing: 0.604px; /* -10% */
       text-align: center;
-      min-width: 200px;
+      min-width: 180px; /* slightly smaller */
     }
 
     footer {
@@ -126,13 +126,14 @@
       }
       .contact-form textarea {
         padding: 14px 22px;
-        border-radius: 23px; /* scaled down for mobile */
+        border-radius: 23px;
       }
       .contact-form .btn {
-        padding: 14px 28px;
-        border-radius: 49px;
+        padding: 12px 25px; /* smaller on mobile too */
+        border-radius: 44px;
         margin-top: 9.996px;
-        width: 100%;
+        width: auto; /* keep auto width */
+        min-width: 160px;
       }
       .contact-form { gap: 9.996px; }
       footer { margin-top: 58.8px; }
