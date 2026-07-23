@@ -17,7 +17,6 @@
     html, body {
       max-width: 100%;
       overflow-x: hidden;
-      transition: opacity 0.3s ease; /* for fade effect */
     }
     body {
       font-family: "Atkinson Hyperlegible", sans-serif;
@@ -142,7 +141,7 @@
 <body>
   <header>
     <a href="https://linksco.co.za" class="logo">LINKSCO</a>
-    <a href="mailto:info@linksco.co.za?subject=Enquiry%20from%20Linksco%20Website" class="btn">Get in touch</a>
+    <a href="mailto:info@linksco.co.za" class="btn">Get in touch</a>
   </header>
 
   <div class="image-container">
@@ -154,22 +153,19 @@
       link.addEventListener('click', function(e) {
         const href = this.href;
 
-        // Instant for email, phone, or new tab links. No delay = no popup
-        if (href.startsWith('mailto:') || href.startsWith('tel:') || this.target === '_blank') {
+        // Skip delay for mailto links. Opens instantly, no popup
+        if (href.startsWith('mailto:')) {
           return; 
         }
 
-        // Delayed fade for all other links
+        // Keep 1s delay for all other links
         e.preventDefault();
-        document.body.style.opacity = '0.7';
-
         setTimeout(() => {
           window.location.href = href;
         }, 1000);
       });
     });
 
-    // Image protection
     document.addEventListener('contextmenu', e => {
       if(e.target.tagName === 'IMG') e.preventDefault();
     });
