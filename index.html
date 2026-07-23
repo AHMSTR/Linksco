@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f2f2f2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <title>Linksco</title>
   <style>
     * {
@@ -21,11 +21,16 @@
     }
     body {
       font-family: "Atkinson Hyperlegible", sans-serif;
-      font-weight: 400;
+      font-weight: 400; /* all text 400 */
       background: #f2f2f2;
       min-height: 100vh;
       padding: 29.4px 58.8px;
       color: #444;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1; /* pushes footer down */
     }
     header {
       display: flex;
@@ -37,7 +42,7 @@
     }
     .logo {
       font-size: 1.54265769rem;
-      font-weight: 400;
+      font-weight: 400; /* was 400 */
       color: #333;
       text-transform: uppercase;
       text-decoration: none;
@@ -114,7 +119,7 @@
       background: transparent;
     }
 
-    /* Contact Form - matches Linksco design */
+    /* Contact Form */
     .contact-section {
       max-width: 700px;
       margin: 78.4px auto 0 auto;
@@ -122,7 +127,7 @@
     }
     .contact-section h2 {
       font-size: 1.8rem;
-      font-weight: 700;
+      font-weight: 400; /* changed from 700 */
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 19.6px;
@@ -130,6 +135,7 @@
     }
     .contact-section p {
       font-size: 0.95rem;
+      font-weight: 400;
       margin-bottom: 39.2px;
       opacity: 0.8;
     }
@@ -146,6 +152,7 @@
       border: none;
       background: #f2f2f2;
       font-family: "Atkinson Hyperlegible", sans-serif;
+      font-weight: 400;
       font-size: 0.95rem;
       color: #444;
       box-shadow: 
@@ -168,6 +175,20 @@
     .contact-form .btn {
       align-self: center;
       margin-top: 9.8px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 98px;
+      padding: 29.4px 0;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #666;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-top: 1px solid #e0e0e0;
+      box-shadow: 0 -4px 8px -4px #d9d9d9;
     }
 
     @media (max-width: 768px) {
@@ -200,50 +221,56 @@
       .contact-section h2 {
         font-size: 1.4rem;
       }
+      footer {
+        margin-top: 58.8px;
+        padding: 19.6px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="https://linksco.co.za" class="logo">LINKSCO</a>
-    <a href="#contact" class="btn">Get in touch</a>
-  </header>
+  <main>
+    <header>
+      <a href="https://linksco.co.za" class="logo">LINKSCO</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </header>
 
-  <div class="image-container">
-    <img src="milad-fakurian-I4yMBCjVljo-unsplash.jpg" alt="Hero image" draggable="false" oncontextmenu="return false">
-  </div>
+    <div class="image-container">
+      <img src="milad-fakurian-I4yMBCjVljo-unsplash.jpg" alt="Hero image" draggable="false" oncontextmenu="return false">
+    </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <h2>Let's Build Something</h2>
-    <p>Have a project in mind? Send us a message and we'll get back to you.</p>
-    
-    <form class="contact-form" action="https://formsubmit.co/info@linksco.co.za" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Let's Build Something</h2>
+      <p>Have a project in mind? Send us a message and we'll get back to you.</p>
       
-      <!-- FormSubmit settings -->
-      <input type="hidden" name="_subject" value="New enquiry from Linksco Website">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://linksco.co.za"> <!-- redirect back after submit -->
-      <input type="text" name="_honey" style="display:none"> <!-- spam trap -->
+      <form class="contact-form" action="https://formsubmit.co/info@linksco.co.za" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+        
+        <input type="hidden" name="_subject" value="New enquiry from Linksco Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://linksco.co.za">
+        <input type="text" name="_honey" style="display:none">
 
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 LINKSCO. ALL RIGHTS RESERVED.
+  </footer>
 
   <script>
     document.querySelectorAll('a[href^="http"], a.logo').forEach(link => {
       link.addEventListener('click', function(e) {
         const href = this.href;
-
-        // Skip delay for mailto and anchor links
         if (href.startsWith('mailto:') || href.startsWith('#')) {
           return; 
         }
-
-        // Keep 1s delay for other links
         e.preventDefault();
         document.body.style.opacity = '0.7';
         setTimeout(() => {
